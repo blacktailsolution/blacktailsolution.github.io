@@ -3,6 +3,9 @@
 :root {
     --primary-color: #1d7532;
     --secondary-color: #308540;
+    --surface: #f7fbf2;
+    --secondary-container: #d4e8d0;
+    --white-text: #fff;
 }
 
 html,
