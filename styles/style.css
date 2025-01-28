@@ -1,45 +1,48 @@
 /* styles.css */
 
 :root {
-    --primary-color: #1d7532;
-    --secondary-color: #308540;
-    --surface: #f7fbf2;
+    --primary: #466730;
+    --secondary: #78866b;
+    --tertiary: #d4e8d0;
     --secondary-container: #d4e8d0;
-    --white-text: #fff;
+    --black-text-color: #0f0f0f;
+    --shop-button-text-color: #FFF;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-
+.mail-link {
+    color: var(--tertiary);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+    font-family: 'Libre Baskerville', serif;
     padding: 0;
     text-align: center;
-    background-color: #fafafa;
+    background-color: var(--secondary);
     color: #333;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 h1 {
     font-weight: 700;
-    color: #2c3e50;
-    margin-top: 50px;
-    font-size: 2.5em;
+    color: var(--black-text-color);
+
+    font-size: 2.0em;
 }
 
 h2 {
     font-weight: 700;
-    color: #2c3e50;
-    margin-top: 50px;
-    font-size: 2em;
+    color: var(--black-text-color);
+
+    font-size: 1.5em;
 }
 
+h3 {
+    font-weight: 600;
+    color: var(--black-text-color);
+    font-size: 1.0em;
+}
 
 header {
     margin: 0;
@@ -47,13 +50,13 @@ header {
 }
 
 main {
-    padding: 12px;
     flex-grow: 1;
     /* Add styles for main content here */
 }
 
-main p {
-    font-size: 1.5em;
+p {
+    font-size: 1.0em;
+    color: var(--black-text-color);
     margin-bottom: 20px;
 }
 
@@ -63,54 +66,22 @@ footer {
     padding: 10px;
 }
 
-.hero-banner {
-    position: relative;
-    height: 400px;
-    /* Adjust the height as needed */
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
-    /* Replace with your image URL */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
+.glossy-button {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
     font-size: 1.2em;
-    color: #fff;
-    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: var(--secondary-color);
+.glossy-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
-
-.cta-button:active {
-    background-color: var(--primary-color);
-}
-
 
 .image-container {
     display: flex;
@@ -127,12 +98,10 @@ img {
 }
 
 /* contact form */
-
 textarea,
 input {
     font-family: Helvetica, Arial, sans-serif;
 }
-
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text],
@@ -158,19 +127,14 @@ textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: var(--primary-color);
-    color: white;
+    color: var(--shop-button-text-color);
+    background-color: var(--primary);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
 
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: var(--secondary-color);
 }
 
 /* Add a background color and some padding around the form */
@@ -184,6 +148,22 @@ input[type=submit]:hover {
     max-width: 400px;
 }
 
+.content-container {
+    margin: auto;
+    position: relative;
+    align-items: center;
+    text-align: left;
+    border-radius: 5px;
+    max-width: 600px;
+    padding: 24px;
+    margin-bottom: 24px;
+    background: var(--tertiary);
+}
+
+.content-container h2 {
+    text-align: center;
+}
+
 .note-container {
     height: 150px;
 }
@@ -195,3 +175,42 @@ input[type=submit]:hover {
 #thank-you-message.show {
     display: block;
 }
+
+
+.marquee-img {
+    flex-shrink: 0;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.marquee-container {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 45px;
+}
+
+.marquee {
+    overflow: clip;
+}
+
+.marquee-content {
+    display: flex;
+    padding-left: 2.8rem;
+    gap: 2.8rem;
+    
+    animation: marquee-move var(--speed, 30s) linear infinite var(--direction,
+            forwards);
+}
+
+@keyframes marquee-move {
+    to {
+        transform: translateX(-75%);
+    }
+    0% { opacity: 0;}
+    5% { opacity: 100;}
+    95% { opacity: 100;}
+    100% { opacity: 0;} 
+}
+
