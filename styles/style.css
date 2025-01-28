@@ -188,7 +188,8 @@ input[type=submit] {
 .marquee-container {
     width: 100%;
     background-color: #f8f9fa;
-    padding: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
 .marquee {
