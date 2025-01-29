@@ -157,6 +157,8 @@ input[type=submit] {
     max-width: 600px;
     padding: 24px;
     margin-bottom: 24px;
+    margin-right: 8px;
+    margin-left: 8px;
     background: var(--tertiary);
 }
 
