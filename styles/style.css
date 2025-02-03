@@ -185,6 +185,14 @@ input[type=submit] {
     object-fit: cover;
 }
 
+.page-img {
+    flex-shrink: 0;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+}
+
 .marquee-container {
     width: 100%;
     background-color: #f8f9fa;
